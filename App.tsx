@@ -11,6 +11,7 @@ import Auth from './components/Auth';
 import * as db from './services/firebase';
 import type { UserData } from './types';
 import type { User } from 'firebase/auth';
+import ReloadPrompt from './components/ReloadPrompt';
 
 export type View = 'dashboard' | 'goals' | 'anger' | 'planner' | 'settings';
 
@@ -96,6 +97,7 @@ const App: React.FC = () => {
         {renderContent()}
       </main>
       <BottomNav currentView={currentView} setView={setCurrentView} />
+      <ReloadPrompt />
     </div>
   );
 };
